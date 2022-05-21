@@ -14,23 +14,21 @@ const images = [
 ];
 
 
-const galeryEl = document.querySelector('ul.gallery');
-
-const element = images.map(({ url, alt }) => {
-
   // const galeryItemEl = document.createElement('li')
   // const galeryImgEl = document.createElement('img');
   // galeryImgEl.classList.add('galery__img');
   // galeryImgEl.src = url;
   // galeryImgEl.alt = alt;
 
-  // galeryItemEl.appendChild(galeryImgEl);
-
   // return galeryItemEl;
-  
-  galeryEl.insertAdjacentHTML("afterbegin", `<li><img class="galery__img" src="${url}" alt="${alt}"></li>`);
-})
+
+const galeryImgEl = document.querySelector('ul.gallery');
+
+const galeryItemEl = (items) => items
+  .map(({ url, alt }) => `<li><img class="galery__img" src="${url}" alt="${alt}"></li>`)
+  .join("");
 
 
+const elementsImgItems = galeryItemEl(images);
 
-// galeryEl.insertAdjacentHTML("afterbegin", element);
+galeryImgEl.insertAdjacentHTML("beforeend", elementsImgItems);
