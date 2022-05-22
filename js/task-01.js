@@ -3,7 +3,7 @@ const categoryEl = document.querySelectorAll('ul#categories li.item');
 console.log(`Number of categories: ${categoryEl.length}`);
 
 for (const category of categoryEl) {
-    console.log("Category: ", category.querySelectorAll('h2')[0].textContent);
+    console.log("Category: ", category.querySelector('h2').textContent);
     console.log("Elements: ", category.querySelectorAll('ul li').length);
 }
 
