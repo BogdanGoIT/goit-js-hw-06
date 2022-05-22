@@ -9,9 +9,8 @@ btnDecremrntEl.addEventListener('click', () => {
     
     counterValue -= 1;
 
-    btnDecremrntEl.textContent = counterValue;
-    spanValue();
-    console.log(btnDecremrntEl)
+    spanValueEl.textContent = counterValue;
+
 });
 
 
@@ -19,15 +18,11 @@ btnIncrementEl.addEventListener('click', () => {
     
     counterValue += 1;
 
-    btnIncrementEl.textContent = counterValue;
-    spanValue();
-    console.log(btnIncrementEl);
+    spanValueEl.textContent = counterValue;
+
 });
 
 
-function spanValue() {
-    spanValueEl.textContent = counterValue;
-}
 
 
 
